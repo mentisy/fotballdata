@@ -1,0 +1,7 @@
+{
+    "ResponseStatus": {
+        "ErrorCode": "NotFound",
+        "Message": "No stadium with id 10814 was found.",
+        "Errors": []
+    }
+}

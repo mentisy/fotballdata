@@ -1,0 +1,11 @@
+parameters:
+    level: 6
+    paths:
+        - src
+    ignoreErrors:
+        -
+            message: '#Method Avolle\\Fotballdata\\Request\\.+::.+ should return Avolle\\Fotballdata\\Entity\\.+ but returns array<Avolle\\Fotballdata\\Entity\\EntityInterface>\|Avolle\\Fotballdata\\Entity\\EntityInterface\.#'
+            path: src/Request/
+        -
+            message: '#Method Avolle\\Fotballdata\\Request\\.+::.+ should return array<Avolle\\Fotballdata\\Entity\\.+> but returns array<Avolle\\Fotballdata\\Entity\\EntityInterface>\|Avolle\\Fotballdata\\Entity\\EntityInterface\.#'
+            path: src/Request/

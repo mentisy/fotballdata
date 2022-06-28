@@ -1,0 +1,78 @@
+[
+    {
+        "DistrictId": 18,
+        "DistrictName": "Hålogaland Fotballkrets"
+    },
+    {
+        "DistrictId": 19,
+        "DistrictName": "NFF Agder"
+    },
+    {
+        "DistrictId": 3,
+        "DistrictName": "NFF Akershus"
+    },
+    {
+        "DistrictId": 6,
+        "DistrictName": "NFF Buskerud"
+    },
+    {
+        "DistrictId": 10,
+        "DistrictName": "NFF Hordaland"
+    },
+    {
+        "DistrictId": 5,
+        "DistrictName": "NFF Indre Østland"
+    },
+    {
+        "DistrictId": 14,
+        "DistrictName": "NFF Nordland"
+    },
+    {
+        "DistrictId": 12,
+        "DistrictName": "NFF Nordmøre Og Romsdal"
+    },
+    {
+        "DistrictId": 4,
+        "DistrictName": "NFF Oslo"
+    },
+    {
+        "DistrictId": 9,
+        "DistrictName": "NFF Rogaland"
+    },
+    {
+        "DistrictId": 11,
+        "DistrictName": "NFF Sogn Og Fjordane"
+    },
+    {
+        "DistrictId": 8,
+        "DistrictName": "NFF Telemark"
+    },
+    {
+        "DistrictId": 13,
+        "DistrictName": "NFF Trøndelag"
+    },
+    {
+        "DistrictId": 7,
+        "DistrictName": "NFF Vestfold"
+    },
+    {
+        "DistrictId": 1,
+        "DistrictName": "Norges Fotballforbund"
+    },
+    {
+        "DistrictId": 16,
+        "DistrictName": "Norges Fotballforbund Finnmark"
+    },
+    {
+        "DistrictId": 17,
+        "DistrictName": "Sunnmøre Fotballkrets"
+    },
+    {
+        "DistrictId": 15,
+        "DistrictName": "Troms Fotballkrets"
+    },
+    {
+        "DistrictId": 2,
+        "DistrictName": "Østfold Fotballkrets"
+    }
+]

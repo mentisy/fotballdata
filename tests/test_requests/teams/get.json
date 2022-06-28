@@ -1,0 +1,47 @@
+{
+    "TeamId": 26886,
+    "TeamName": "A Team Senior A",
+    "ClubId": 997,
+    "Persons": [
+        {
+            "Email": "",
+            "FirstName": "Alexander",
+            "MobilePhone": "",
+            "PersonId": 2584224,
+            "PersonInfoHidden": false,
+            "RoleId": 1,
+            "RoleName": "Ass.Lagleder",
+            "SurName": "Vollisen"
+        },
+        {
+            "Email": "adm@example.org",
+            "FirstName": "Filip",
+            "MobilePhone": "99666666",
+            "PersonId": 2896712,
+            "PersonInfoHidden": false,
+            "RoleId": 20,
+            "RoleName": "Adm. leder",
+            "SurName": "Myhre"
+        },
+        {
+            "Email": "celine@example.org",
+            "FirstName": "Celine",
+            "MobilePhone": "92224164",
+            "PersonId": 3041764,
+            "PersonInfoHidden": false,
+            "RoleId": 3,
+            "RoleName": "Trener",
+            "SurName": "Hamre"
+        },
+        {
+            "Email": "jone@example.org",
+            "FirstName": "Jone",
+            "MobilePhone": "99555555",
+            "PersonId": 3041764,
+            "PersonInfoHidden": false,
+            "RoleId": 4,
+            "RoleName": "Kontaktperson",
+            "SurName": "Nygård"
+        }
+    ]
+}

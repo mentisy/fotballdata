@@ -1,0 +1,83 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - '*'
+
+permissions:
+  contents: read
+
+jobs:
+  testsuite:
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ['7.4', '8.0', '8.1']
+    name: PHP ${{ matrix.php-version }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: pcov
+
+      - name: Composer install
+        run: |
+          composer update
+
+      - name: Run PHPUnit
+        run: |
+          vendor/bin/phpunit --coverage-clover=coverage.xml
+
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          version: v0.1.15
+          files: coverage.xml
+
+  coding-standard:
+    name: Coding Standard
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          coverage: none
+
+      - name: Composer install
+        run: composer install
+
+      - name: Run PHP CodeSniffer
+        run: composer cs-check
+
+  static-analysis:
+    name: Static Analysis
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          coverage: none
+
+      - name: composer install
+        run: composer require --dev phpstan/phpstan
+
+      - name: Run phpstan
+        run: vendor/bin/phpstan
