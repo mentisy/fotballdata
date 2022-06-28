@@ -82,6 +82,56 @@ class TeamsRequestsTest extends TestCase
     }
 
     /**
+     * Test tournaments method
+     *
+     * @return void
+     * @throws \Exception
+     * @uses \Avolle\Fotballdata\Request\TeamsRequests::tournaments()
+     */
+    public function testTournaments(): void
+    {
+        Client::clearMockResponses();
+        Client::addMockResponse(
+            'GET',
+            'https://api.fotballdata.no/v1/teams/30000/tournaments?clubId=1&cid=2&cwd=a-pass&format=json',
+            $this->fakeOkResponse('teams/tournaments.json'),
+        );
+        $teamsRequest = new TeamsRequests($this->validConfig());
+        $team = $teamsRequest->tournaments(30000);
+        $this->assertInstanceOf(Team::class, $team);
+        $this->assertIsArray($team->Tournaments);
+        $this->assertSame('5. div. menn', $team->Tournaments[0]->TournamentName);
+    }
+
+    /**
+     * Test tables method
+     *
+     * @return void
+     * @throws \Exception
+     * @uses \Avolle\Fotballdata\Request\TeamsRequests::tables()
+     */
+    public function testTables(): void
+    {
+        Client::clearMockResponses();
+        Client::addMockResponse(
+            'GET',
+            'https://api.fotballdata.no/v1/teams/30000/tables?clubId=1&cid=2&cwd=a-pass&format=json',
+            $this->fakeOkResponse('teams/tables.json'),
+        );
+        $teamsRequest = new TeamsRequests($this->validConfig());
+        $team = $teamsRequest->tables(30000);
+        $this->assertInstanceOf(Team::class, $team);
+        $this->assertIsArray($team->Tournaments);
+        $this->assertSame('5. div. menn', $team->Tournaments[0]->TournamentName);
+        // Tournament has table
+        $this->assertIsArray($team->Tournaments[0]->TournamentTableTeams);
+        // Table has 12 teams
+        $this->assertCount(12, $team->Tournaments[0]->TournamentTableTeams);
+        // 1st place team is Aksla
+        $this->assertSame('Aksla Senior A', $team->Tournaments[0]->TournamentTableTeams[0]->TeamName);
+    }
+
+    /**
      * Test players method
      *
      * @return void

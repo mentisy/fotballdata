@@ -1,0 +1,37 @@
+{
+    "TeamId": 30000,
+    "TeamName": "A Team Senior A",
+    "ClubId": 997,
+    "Tournaments": [
+        {
+            "TournamentId": 181413,
+            "TournamentName": "5. div. menn",
+            "AgeCategoryId": 4,
+            "DistrictId": 17,
+            "Division": 5,
+            "GenderId": 2,
+            "Group": 1,
+            "HalfTimeBreakInMin": 15,
+            "LastChangedDate": "\/Date(1654590422437-0000)\/",
+            "MatchPeriodDurationInMin": 45,
+            "NumberOfMatchPeriods": 2,
+            "NumberOfPromotedTeams": 2,
+            "NumberOfRelegatedTeams": 0,
+            "NumberOfTeams": 12,
+            "NumberOfTeamsQualifiedForPromotion": 0,
+            "NumberOfTeamsQualifiedForRelegation": 0,
+            "PitchSizeName": "11er",
+            "PlayersOnField": 11,
+            "PlayFormName": "11 MOT 11",
+            "PublishResult": true,
+            "PublishTournamentTable": true,
+            "PushChanges": false,
+            "SeasonId": 100,
+            "StartDateFirstTournamentRound": "\/Date(1650240000000-0000)\/",
+            "TournamentAgeCategory": 18,
+            "TournamentNumber": "23120501",
+            "TournamentStatusId": 6,
+            "TournamentTypeId": 1
+        }
+    ]
+}
