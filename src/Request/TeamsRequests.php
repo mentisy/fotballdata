@@ -54,6 +54,22 @@ class TeamsRequests extends BaseRequest
     }
 
     /**
+     * Get tables for a team from the API
+     *
+     * @param int $id Team id
+     * @return \Avolle\Fotballdata\Entity\Team
+     * @throws \Avolle\Fotballdata\Exception\EntityClassNotFoundException
+     * @throws \Avolle\Fotballdata\Exception\InvalidResponseException
+     */
+    public function tables(int $id): EntityInterface
+    {
+        $endpoint = (new TeamsEndpoints())->tables($id);
+        $this->sendRequest($endpoint);
+
+        return $this->convertResponse();
+    }
+
+    /**
      * @param int $id
      * @return \Avolle\Fotballdata\Entity\Team
      * @throws \Avolle\Fotballdata\Exception\EntityClassNotFoundException
