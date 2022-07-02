@@ -8,7 +8,6 @@ use Avolle\Fotballdata\Entity\Stadium;
 use Avolle\Fotballdata\Request\StadiumsRequests;
 use Avolle\Fotballdata\Test\TestClasses\FakeResponseTrait;
 use Avolle\Fotballdata\Test\TestClasses\TestConfigTrait;
-use Cake\Http\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,12 +29,6 @@ class StadiumsRequestsTest extends TestCase
      */
     public function testGet(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/stadiums/1?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $stadiumsRequests = new StadiumsRequests($this->validConfig());
         $stadium = $stadiumsRequests->get(1);
         $this->assertInstanceOf(Stadium::class, $stadium);
@@ -52,12 +45,6 @@ class StadiumsRequestsTest extends TestCase
      */
     public function testMatches(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/stadiums/26886/matches?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $stadiumsRequests = new StadiumsRequests($this->validConfig());
         $stadium = $stadiumsRequests->matches(26886);
         $this->assertInstanceOf(Stadium::class, $stadium);
@@ -74,12 +61,6 @@ class StadiumsRequestsTest extends TestCase
      */
     public function testClubMatches(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/stadiums/1034/clubs/997/matches?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $stadiumsRequests = new StadiumsRequests($this->validConfig());
         $stadium = $stadiumsRequests->clubMatches(1034, 997);
         $this->assertInstanceOf(Stadium::class, $stadium);
@@ -96,14 +77,10 @@ class StadiumsRequestsTest extends TestCase
      */
     public function testChildren(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/stadiums/1034/children?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $stadiumsRequests = new StadiumsRequests($this->validConfig());
-        $stadium = $stadiumsRequests->children(1034);
-        $this->assertInstanceOf(Stadium::class, $stadium);
+        $stadiumChildren = $stadiumsRequests->children(1034);
+        $this->assertIsArray($stadiumChildren);
+        $firstStadium = $stadiumChildren[0];
+        $this->assertInstanceOf(Stadium::class, $firstStadium);
     }
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Avolle\Fotballdata\Test\TestClasses;
 
+use Avolle\Fotballdata\Request\Mock\MockRequest;
 use Cake\Http\Client\Response;
 use Cake\Http\TestSuite\HttpClientTrait;
 
@@ -22,7 +23,7 @@ trait FakeResponseTrait
      */
     public function fakeOkResponse(string $filename): Response
     {
-        return $this->newClientResponse(200, [], file_get_contents(TEST_REQUESTS . $filename));
+        return $this->newClientResponse(200, [], file_get_contents(MockRequest::MOCK_REQUEST_PATH . $filename));
     }
 
     /**
@@ -43,7 +44,7 @@ trait FakeResponseTrait
      */
     public function fakeNotFoundResponse(?string $filename = null): Response
     {
-        $body = empty($filename) ? '' : file_get_contents(TEST_REQUESTS . $filename);
+        $body = empty($filename) ? '' : file_get_contents(MockRequest::MOCK_REQUEST_PATH . $filename);
 
         return $this->newClientResponse(404, [], $body);
     }

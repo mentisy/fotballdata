@@ -1,0 +1,524 @@
+[
+    {
+        "SeasonId": 1,
+        "SeasonName": "Fotballsesongen 2001",
+        "SeasonStartDate": "\/Date(986083200000-0000)\/",
+        "SeasonEndDate": "\/Date(1005782400000-0000)\/"
+    },
+    {
+        "SeasonId": 2,
+        "SeasonName": "Fotballsesongen 2002",
+        "SeasonStartDate": "\/Date(1017619200000-0000)\/",
+        "SeasonEndDate": "\/Date(1037318400000-0000)\/"
+    },
+    {
+        "SeasonId": 3,
+        "SeasonName": "Fotballsesongen 2003",
+        "SeasonStartDate": "\/Date(1049155200000-0000)\/",
+        "SeasonEndDate": "\/Date(1068854400000-0000)\/"
+    },
+    {
+        "SeasonId": 4,
+        "SeasonName": "Fotballsesongen 2004",
+        "SeasonStartDate": "\/Date(1080777600000-0000)\/",
+        "SeasonEndDate": "\/Date(1100476800000-0000)\/"
+    },
+    {
+        "SeasonId": 5,
+        "SeasonName": "Fotballsesongen 2005",
+        "SeasonStartDate": "\/Date(1112313600000-0000)\/",
+        "SeasonEndDate": "\/Date(1132012800000-0000)\/"
+    },
+    {
+        "SeasonId": 6,
+        "SeasonName": "Fotballsesongen 2006",
+        "SeasonStartDate": "\/Date(1143849600000-0000)\/",
+        "SeasonEndDate": "\/Date(1163548800000-0000)\/"
+    },
+    {
+        "SeasonId": 7,
+        "SeasonName": "Fotballsesongen 2007",
+        "SeasonStartDate": "\/Date(1175385600000-0000)\/",
+        "SeasonEndDate": "\/Date(1195084800000-0000)\/"
+    },
+    {
+        "SeasonId": 8,
+        "SeasonName": "Fotballsesongen 2008",
+        "SeasonStartDate": "\/Date(1207008000000-0000)\/",
+        "SeasonEndDate": "\/Date(1226707200000-0000)\/"
+    },
+    {
+        "SeasonId": 9,
+        "SeasonName": "Fotballsesongen 2009",
+        "SeasonStartDate": "\/Date(1238544000000-0000)\/",
+        "SeasonEndDate": "\/Date(1258243200000-0000)\/"
+    },
+    {
+        "SeasonId": 10,
+        "SeasonName": "Fotballsesongen 1999",
+        "SeasonStartDate": "\/Date(922924800000-0000)\/",
+        "SeasonEndDate": "\/Date(942624000000-0000)\/"
+    },
+    {
+        "SeasonId": 11,
+        "SeasonName": "Fotballsesongen 2000",
+        "SeasonStartDate": "\/Date(954547200000-0000)\/",
+        "SeasonEndDate": "\/Date(974246400000-0000)\/"
+    },
+    {
+        "SeasonId": 12,
+        "SeasonName": "Vinter/Innesesongen 1999/2000",
+        "SeasonStartDate": "\/Date(941414400000-0000)\/",
+        "SeasonEndDate": "\/Date(957052800000-0000)\/"
+    },
+    {
+        "SeasonId": 13,
+        "SeasonName": "Fotballsesongen 1998",
+        "SeasonStartDate": "\/Date(891388800000-0000)\/",
+        "SeasonEndDate": "\/Date(911088000000-0000)\/"
+    },
+    {
+        "SeasonId": 14,
+        "SeasonName": "Fotballsesongen 1997",
+        "SeasonStartDate": "\/Date(859852800000-0000)\/",
+        "SeasonEndDate": "\/Date(879552000000-0000)\/"
+    },
+    {
+        "SeasonId": 15,
+        "SeasonName": "Fotballsesongen 1996",
+        "SeasonStartDate": "\/Date(828316800000-0000)\/",
+        "SeasonEndDate": "\/Date(848016000000-0000)\/"
+    },
+    {
+        "SeasonId": 16,
+        "SeasonName": "Fotballsesongen 1995",
+        "SeasonStartDate": "\/Date(796694400000-0000)\/",
+        "SeasonEndDate": "\/Date(816393600000-0000)\/"
+    },
+    {
+        "SeasonId": 17,
+        "SeasonName": "Fotballsesongen 1994",
+        "SeasonStartDate": "\/Date(765158400000-0000)\/",
+        "SeasonEndDate": "\/Date(784857600000-0000)\/"
+    },
+    {
+        "SeasonId": 18,
+        "SeasonName": "Fotballsesongen 1993",
+        "SeasonStartDate": "\/Date(733622400000-0000)\/",
+        "SeasonEndDate": "\/Date(753321600000-0000)\/"
+    },
+    {
+        "SeasonId": 19,
+        "SeasonName": "Fotballsesongen 1992",
+        "SeasonStartDate": "\/Date(702086400000-0000)\/",
+        "SeasonEndDate": "\/Date(721785600000-0000)\/"
+    },
+    {
+        "SeasonId": 20,
+        "SeasonName": "Fotballsesongen 1991",
+        "SeasonStartDate": "\/Date(670464000000-0000)\/",
+        "SeasonEndDate": "\/Date(690163200000-0000)\/"
+    },
+    {
+        "SeasonId": 21,
+        "SeasonName": "Fotballsesongen 1990",
+        "SeasonStartDate": "\/Date(638928000000-0000)\/",
+        "SeasonEndDate": "\/Date(658627200000-0000)\/"
+    },
+    {
+        "SeasonId": 22,
+        "SeasonName": "Fotballsesongen 1989",
+        "SeasonStartDate": "\/Date(607392000000-0000)\/",
+        "SeasonEndDate": "\/Date(627091200000-0000)\/"
+    },
+    {
+        "SeasonId": 23,
+        "SeasonName": "Fotballsesongen 1988",
+        "SeasonStartDate": "\/Date(575856000000-0000)\/",
+        "SeasonEndDate": "\/Date(595555200000-0000)\/"
+    },
+    {
+        "SeasonId": 24,
+        "SeasonName": "Fotballsesongen 1987",
+        "SeasonStartDate": "\/Date(544233600000-0000)\/",
+        "SeasonEndDate": "\/Date(563932800000-0000)\/"
+    },
+    {
+        "SeasonId": 25,
+        "SeasonName": "Fotballsesongen 1986",
+        "SeasonStartDate": "\/Date(512697600000-0000)\/",
+        "SeasonEndDate": "\/Date(532396800000-0000)\/"
+    },
+    {
+        "SeasonId": 26,
+        "SeasonName": "Fotballsesongen 1985",
+        "SeasonStartDate": "\/Date(481161600000-0000)\/",
+        "SeasonEndDate": "\/Date(500860800000-0000)\/"
+    },
+    {
+        "SeasonId": 27,
+        "SeasonName": "Fotballsesongen 1984",
+        "SeasonStartDate": "\/Date(449625600000-0000)\/",
+        "SeasonEndDate": "\/Date(469324800000-0000)\/"
+    },
+    {
+        "SeasonId": 28,
+        "SeasonName": "Fotballsesongen 1983",
+        "SeasonStartDate": "\/Date(418003200000-0000)\/",
+        "SeasonEndDate": "\/Date(437702400000-0000)\/"
+    },
+    {
+        "SeasonId": 29,
+        "SeasonName": "Fotballsesongen 1982",
+        "SeasonStartDate": "\/Date(386467200000-0000)\/",
+        "SeasonEndDate": "\/Date(406166400000-0000)\/"
+    },
+    {
+        "SeasonId": 30,
+        "SeasonName": "Fotballsesongen 1981",
+        "SeasonStartDate": "\/Date(354931200000-0000)\/",
+        "SeasonEndDate": "\/Date(374630400000-0000)\/"
+    },
+    {
+        "SeasonId": 31,
+        "SeasonName": "Fotballsesongen 1980",
+        "SeasonStartDate": "\/Date(323395200000-0000)\/",
+        "SeasonEndDate": "\/Date(343094400000-0000)\/"
+    },
+    {
+        "SeasonId": 32,
+        "SeasonName": "Fotballsesongen 1979",
+        "SeasonStartDate": "\/Date(291772800000-0000)\/",
+        "SeasonEndDate": "\/Date(311472000000-0000)\/"
+    },
+    {
+        "SeasonId": 33,
+        "SeasonName": "Fotballsesongen 1978",
+        "SeasonStartDate": "\/Date(260236800000-0000)\/",
+        "SeasonEndDate": "\/Date(279936000000-0000)\/"
+    },
+    {
+        "SeasonId": 34,
+        "SeasonName": "Fotballsesongen 1974",
+        "SeasonStartDate": "\/Date(134006400000-0000)\/",
+        "SeasonEndDate": "\/Date(153705600000-0000)\/"
+    },
+    {
+        "SeasonId": 35,
+        "SeasonName": "Fotballsesongen 1973",
+        "SeasonStartDate": "\/Date(102470400000-0000)\/",
+        "SeasonEndDate": "\/Date(122169600000-0000)\/"
+    },
+    {
+        "SeasonId": 36,
+        "SeasonName": "Fotballsesongen 1972",
+        "SeasonStartDate": "\/Date(70934400000-0000)\/",
+        "SeasonEndDate": "\/Date(90633600000-0000)\/"
+    },
+    {
+        "SeasonId": 37,
+        "SeasonName": "Landskamper",
+        "SeasonStartDate": "\/Date(-3786825600000-0000)\/",
+        "SeasonEndDate": "\/Date(32503593600000-0000)\/"
+    },
+    {
+        "SeasonId": 38,
+        "SeasonName": "Internasjonal fotball 1998/99",
+        "SeasonStartDate": "\/Date(899251200000-0000)\/",
+        "SeasonEndDate": "\/Date(930700800000-0000)\/"
+    },
+    {
+        "SeasonId": 39,
+        "SeasonName": "Internasjonal fotball 1997/98",
+        "SeasonStartDate": "\/Date(867715200000-0000)\/",
+        "SeasonEndDate": "\/Date(899164800000-0000)\/"
+    },
+    {
+        "SeasonId": 40,
+        "SeasonName": "Internasjonal fotball 1996/97",
+        "SeasonStartDate": "\/Date(836179200000-0000)\/",
+        "SeasonEndDate": "\/Date(867628800000-0000)\/"
+    },
+    {
+        "SeasonId": 41,
+        "SeasonName": "Internasjonal fotball 1995/96",
+        "SeasonStartDate": "\/Date(804556800000-0000)\/",
+        "SeasonEndDate": "\/Date(836092800000-0000)\/"
+    },
+    {
+        "SeasonId": 42,
+        "SeasonName": "Internasjonal fotball 1994/95",
+        "SeasonStartDate": "\/Date(773020800000-0000)\/",
+        "SeasonEndDate": "\/Date(804470400000-0000)\/"
+    },
+    {
+        "SeasonId": 43,
+        "SeasonName": "Internasjonal fotball 1993/94",
+        "SeasonStartDate": "\/Date(741484800000-0000)\/",
+        "SeasonEndDate": "\/Date(772934400000-0000)\/"
+    },
+    {
+        "SeasonId": 44,
+        "SeasonName": "Internasjonal fotball 1992/93",
+        "SeasonStartDate": "\/Date(709948800000-0000)\/",
+        "SeasonEndDate": "\/Date(741398400000-0000)\/"
+    },
+    {
+        "SeasonId": 45,
+        "SeasonName": "Internasjonal fotball 1999/2000",
+        "SeasonStartDate": "\/Date(930787200000-0000)\/",
+        "SeasonEndDate": "\/Date(962323200000-0000)\/"
+    },
+    {
+        "SeasonId": 46,
+        "SeasonName": "Fotballsesongen 1971",
+        "SeasonStartDate": "\/Date(39312000000-0000)\/",
+        "SeasonEndDate": "\/Date(59011200000-0000)\/"
+    },
+    {
+        "SeasonId": 47,
+        "SeasonName": "Kretskamper",
+        "SeasonStartDate": "\/Date(-2208988800000-0000)\/",
+        "SeasonEndDate": "\/Date(32503593600000-0000)\/"
+    },
+    {
+        "SeasonId": 48,
+        "SeasonName": "Fotball Vinter/innesesongen 2000/2001",
+        "SeasonStartDate": "\/Date(973036800000-0000)\/",
+        "SeasonEndDate": "\/Date(988588800000-0000)\/"
+    },
+    {
+        "SeasonId": 49,
+        "SeasonName": "Vinter/Innesesongen 2001/2002",
+        "SeasonStartDate": "\/Date(1004572800000-0000)\/",
+        "SeasonEndDate": "\/Date(1017619200000-0000)\/"
+    },
+    {
+        "SeasonId": 51,
+        "SeasonName": "Vinter/Innesesongen 2002/2003",
+        "SeasonStartDate": "\/Date(1033948800000-0000)\/",
+        "SeasonEndDate": "\/Date(1051401600000-0000)\/"
+    },
+    {
+        "SeasonId": 52,
+        "SeasonName": "Vinter/Innesesongen 2003/2004",
+        "SeasonStartDate": "\/Date(1064966400000-0000)\/",
+        "SeasonEndDate": "\/Date(1082246400000-0000)\/"
+    },
+    {
+        "SeasonId": 53,
+        "SeasonName": "Coca-Cola Cup 2003/2004",
+        "SeasonStartDate": "\/Date(1066176000000-0000)\/",
+        "SeasonEndDate": "\/Date(1086048000000-0000)\/"
+    },
+    {
+        "SeasonId": 55,
+        "SeasonName": "Vinter/Innesesongen 2004/2005",
+        "SeasonStartDate": "\/Date(1096588800000-0000)\/",
+        "SeasonEndDate": "\/Date(1114300800000-0000)\/"
+    },
+    {
+        "SeasonId": 56,
+        "SeasonName": "Coca-Cola Cup 2004/2005",
+        "SeasonStartDate": "\/Date(1097798400000-0000)\/",
+        "SeasonEndDate": "\/Date(1117584000000-0000)\/"
+    },
+    {
+        "SeasonId": 58,
+        "SeasonName": "Vinter/Innesesongen 2005/2006",
+        "SeasonStartDate": "\/Date(1128124800000-0000)\/",
+        "SeasonEndDate": "\/Date(1146355200000-0000)\/"
+    },
+    {
+        "SeasonId": 59,
+        "SeasonName": "Coca-Cola Cup 2005/2006",
+        "SeasonStartDate": "\/Date(1129334400000-0000)\/",
+        "SeasonEndDate": "\/Date(1149120000000-0000)\/"
+    },
+    {
+        "SeasonId": 60,
+        "SeasonName": "Vinter/Innesesongen 2006/2007",
+        "SeasonStartDate": "\/Date(1159660800000-0000)\/",
+        "SeasonEndDate": "\/Date(1177891200000-0000)\/"
+    },
+    {
+        "SeasonId": 62,
+        "SeasonName": "Coca-Cola Cup 2006/2007",
+        "SeasonStartDate": "\/Date(1160870400000-0000)\/",
+        "SeasonEndDate": "\/Date(1180656000000-0000)\/"
+    },
+    {
+        "SeasonId": 65,
+        "SeasonName": "Coca-Cola Cup 2007/2008",
+        "SeasonStartDate": "\/Date(1192406400000-0000)\/",
+        "SeasonEndDate": "\/Date(1212278400000-0000)\/"
+    },
+    {
+        "SeasonId": 66,
+        "SeasonName": "Vinter/Innesesongen 2008/2009",
+        "SeasonStartDate": "\/Date(1222819200000-0000)\/",
+        "SeasonEndDate": "\/Date(1243641600000-0000)\/"
+    },
+    {
+        "SeasonId": 68,
+        "SeasonName": "Vinter/Innesesongen 2009/2010",
+        "SeasonStartDate": "\/Date(1254355200000-0000)\/",
+        "SeasonEndDate": "\/Date(1275177600000-0000)\/"
+    },
+    {
+        "SeasonId": 69,
+        "SeasonName": "Fotballsesongen 2010",
+        "SeasonStartDate": "\/Date(1270080000000-0000)\/",
+        "SeasonEndDate": "\/Date(1289779200000-0000)\/"
+    },
+    {
+        "SeasonId": 72,
+        "SeasonName": "Vinter/Innesesongen 2010/2011",
+        "SeasonStartDate": "\/Date(1285891200000-0000)\/",
+        "SeasonEndDate": "\/Date(1306713600000-0000)\/"
+    },
+    {
+        "SeasonId": 73,
+        "SeasonName": "Fotballsesongen 2011",
+        "SeasonStartDate": "\/Date(1301616000000-0000)\/",
+        "SeasonEndDate": "\/Date(1321315200000-0000)\/"
+    },
+    {
+        "SeasonId": 74,
+        "SeasonName": "Vinter/Innesesongen 2011/2012",
+        "SeasonStartDate": "\/Date(1317427200000-0000)\/",
+        "SeasonEndDate": "\/Date(1338336000000-0000)\/"
+    },
+    {
+        "SeasonId": 75,
+        "SeasonName": "Fotballsesongen 2012",
+        "SeasonStartDate": "\/Date(1333238400000-0000)\/",
+        "SeasonEndDate": "\/Date(1352937600000-0000)\/"
+    },
+    {
+        "SeasonId": 76,
+        "SeasonName": "Vinter/Innesesongen 2012/2013",
+        "SeasonStartDate": "\/Date(1343779200000-0000)\/",
+        "SeasonEndDate": "\/Date(1369872000000-0000)\/"
+    },
+    {
+        "SeasonId": 77,
+        "SeasonName": "Fotballsesongen 2013",
+        "SeasonStartDate": "\/Date(1363478400000-0000)\/",
+        "SeasonEndDate": "\/Date(1385769600000-0000)\/"
+    },
+    {
+        "SeasonId": 78,
+        "SeasonName": "Vinter/Innesesongen 2013/2014",
+        "SeasonStartDate": "\/Date(1380585600000-0000)\/",
+        "SeasonEndDate": "\/Date(1401408000000-0000)\/"
+    },
+    {
+        "SeasonId": 79,
+        "SeasonName": "Fotballsesongen 2014",
+        "SeasonStartDate": "\/Date(1388534400000-0000)\/",
+        "SeasonEndDate": "\/Date(1419984000000-0000)\/"
+    },
+    {
+        "SeasonId": 80,
+        "SeasonName": "Vinter/Innesesongen 2014/2015",
+        "SeasonStartDate": "\/Date(1412121600000-0000)\/",
+        "SeasonEndDate": "\/Date(1432944000000-0000)\/"
+    },
+    {
+        "SeasonId": 81,
+        "SeasonName": "Fotballsesongen 2015",
+        "SeasonStartDate": "\/Date(1420070400000-0000)\/",
+        "SeasonEndDate": "\/Date(1451520000000-0000)\/"
+    },
+    {
+        "SeasonId": 82,
+        "SeasonName": "Vinter/Innesesongen 2015/2016",
+        "SeasonStartDate": "\/Date(1443657600000-0000)\/",
+        "SeasonEndDate": "\/Date(1464566400000-0000)\/"
+    },
+    {
+        "SeasonId": 83,
+        "SeasonName": "Fotballsesongen 2016",
+        "SeasonStartDate": "\/Date(1451606400000-0000)\/",
+        "SeasonEndDate": "\/Date(1483142400000-0000)\/"
+    },
+    {
+        "SeasonId": 86,
+        "SeasonName": "Vinter/Innesesongen 2016/2017",
+        "SeasonStartDate": "\/Date(1475280000000-0000)\/",
+        "SeasonEndDate": "\/Date(1496102400000-0000)\/"
+    },
+    {
+        "SeasonId": 88,
+        "SeasonName": "Fotballsesongen 2017",
+        "SeasonStartDate": "\/Date(1483228800000-0000)\/",
+        "SeasonEndDate": "\/Date(1514678400000-0000)\/"
+    },
+    {
+        "SeasonId": 90,
+        "SeasonName": "Vinter/Innesesongen 2017/2018",
+        "SeasonStartDate": "\/Date(1506816000000-0000)\/",
+        "SeasonEndDate": "\/Date(1527638400000-0000)\/"
+    },
+    {
+        "SeasonId": 91,
+        "SeasonName": "Fotballsesongen 2018",
+        "SeasonStartDate": "\/Date(1514764800000-0000)\/",
+        "SeasonEndDate": "\/Date(1546214400000-0000)\/"
+    },
+    {
+        "SeasonId": 93,
+        "SeasonName": "Vinter/Innesesongen 2018/2019",
+        "SeasonStartDate": "\/Date(1538352000000-0000)\/",
+        "SeasonEndDate": "\/Date(1559174400000-0000)\/"
+    },
+    {
+        "SeasonId": 94,
+        "SeasonName": "Fotballsesongen 2019",
+        "SeasonStartDate": "\/Date(1546300800000-0000)\/",
+        "SeasonEndDate": "\/Date(1577750400000-0000)\/"
+    },
+    {
+        "SeasonId": 95,
+        "SeasonName": "Futsalsesongen 2019/2020",
+        "SeasonStartDate": "\/Date(1569888000000-0000)\/",
+        "SeasonEndDate": "\/Date(1590796800000-0000)\/"
+    },
+    {
+        "SeasonId": 96,
+        "SeasonName": "Fotballsesongen 2020",
+        "SeasonStartDate": "\/Date(1577836800000-0000)\/",
+        "SeasonEndDate": "\/Date(1609372800000-0000)\/"
+    },
+    {
+        "SeasonId": 97,
+        "SeasonName": "Futsalsesongen 2020/2021",
+        "SeasonStartDate": "\/Date(1601510400000-0000)\/",
+        "SeasonEndDate": "\/Date(1622332800000-0000)\/"
+    },
+    {
+        "SeasonId": 98,
+        "SeasonName": "Fotballsesongen 2021",
+        "SeasonStartDate": "\/Date(1609459200000-0000)\/",
+        "SeasonEndDate": "\/Date(1640908800000-0000)\/"
+    },
+    {
+        "SeasonId": 99,
+        "SeasonName": "Futsalsesongen 2021/2022",
+        "SeasonStartDate": "\/Date(1633046400000-0000)\/",
+        "SeasonEndDate": "\/Date(1653868800000-0000)\/"
+    },
+    {
+        "SeasonId": 100,
+        "SeasonName": "Fotballsesongen 2022",
+        "SeasonStartDate": "\/Date(1640995200000-0000)\/",
+        "SeasonEndDate": "\/Date(1672444800000-0000)\/"
+    },
+    {
+        "SeasonId": 101,
+        "SeasonName": "Futsalsesongen 2022/2023",
+        "SeasonStartDate": "\/Date(1664582400000-0000)\/",
+        "SeasonEndDate": "\/Date(1685404800000-0000)\/"
+    }
+]

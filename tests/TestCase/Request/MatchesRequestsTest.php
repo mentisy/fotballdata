@@ -8,7 +8,6 @@ use Avolle\Fotballdata\Entity\Game;
 use Avolle\Fotballdata\Request\MatchesRequests;
 use Avolle\Fotballdata\Test\TestClasses\FakeResponseTrait;
 use Avolle\Fotballdata\Test\TestClasses\TestConfigTrait;
-use Cake\Http\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,12 +29,6 @@ class MatchesRequestsTest extends TestCase
      */
     public function testGet(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/matches/1?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('matches/get.json'),
-        );
         $matchesRequests = new MatchesRequests($this->validConfig());
         $match = $matchesRequests->get(1);
         $this->assertInstanceOf(Game::class, $match);
@@ -53,12 +46,6 @@ class MatchesRequestsTest extends TestCase
      */
     public function testPeople(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/matches/26886/people?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('matches/people.json'),
-        );
         $matchesRequests = new MatchesRequests($this->validConfig());
         $match = $matchesRequests->people(26886);
         $this->assertInstanceOf(Game::class, $match);
@@ -75,12 +62,6 @@ class MatchesRequestsTest extends TestCase
      */
     public function testPeopleAndEvents(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/matches/26886/peopleandevents?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('matches/people-and-events.json'),
-        );
         $matchesRequests = new MatchesRequests($this->validConfig());
         $match = $matchesRequests->peopleAndEvents(26886);
         $this->assertInstanceOf(Game::class, $match);

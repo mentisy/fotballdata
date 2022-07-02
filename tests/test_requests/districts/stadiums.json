@@ -1,0 +1,58 @@
+{
+    "DistrictId": 17,
+    "DistrictName": "Sunnmøre Fotballkrets",
+    "Stadiums": [
+        {
+            "StadiumId": 3046,
+            "StadiumName": "Aksla stadion",
+            "SurfaceName": "Naturgress",
+            "DistrictId": 17,
+            "Latitude": "62.4726294072",
+            "Longitude": "6.18411237631",
+            "LastChangedDate": "\/Date(1442577492937-0000)\/",
+            "StadiumParentId": 10751,
+            "StadiumParentName": "Aksla stadion",
+            "StadiumType": 2
+        },
+        {
+            "StadiumId": 3047,
+            "StadiumName": "Aksla stadion 9er A",
+            "SurfaceName": "Naturgress",
+            "DistrictId": 17,
+            "Latitude": "62.4726294072",
+            "Longitude": "6.18411237631",
+            "LastChangedDate": "\/Date(1545142719243-0000)\/",
+            "StadiumParentId": 3046,
+            "StadiumParentName": "Aksla stadion",
+            "StadiumType": 2
+        },
+        {
+            "StadiumId": 7574,
+            "StadiumName": "AMFI Moa Stadion",
+            "SurfaceName": "Kunstgress m/gummispon",
+            "Address": "Vestmoa 21",
+            "DistrictId": 17,
+            "Latitude": "62.46841002937622",
+            "Longitude": "6.342751873796684",
+            "LastChangedDate": "\/Date(1581325849900-0000)\/",
+            "LightingLux": "100",
+            "StadiumParentId": 10879,
+            "StadiumParentName": "Herdtun",
+            "StadiumType": 2
+        },
+        {
+            "StadiumId": 23605,
+            "StadiumName": "AMFI Moa Stadion Nord 5er A",
+            "SurfaceName": "Kunstgress m/gummispon",
+            "Address": "Vestmoa 21",
+            "DistrictId": 17,
+            "Latitude": "62.467915",
+            "Longitude": "6.343961",
+            "LastChangedDate": "\/Date(1547111719327-0000)\/",
+            "LightingLux": "100",
+            "StadiumParentId": 16862,
+            "StadiumParentName": "AMFI Moa Stadion Nord 7er B",
+            "StadiumType": 2
+        }
+    ]
+}

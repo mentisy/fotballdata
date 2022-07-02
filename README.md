@@ -34,12 +34,13 @@ $match = $matchesRequests->get(1);
 ### Configuration
 Configuration keys. Only `clubId`, `cid` and `cwd` are required from you. These values are given by Fotballdata.
 
-| Key    | Type      | Default Value   | Description                                            |
-|--------|-----------|-----------------|--------------------------------------------------------|
-| debug  | `boolean` | `false`         | Add configuration to HTTP requests to avoid SSL errors |
-| clubId | `int`     | None. Required. | Your club id found in FIKS                             |
-| cid    | `int`     | None. Required. | Authentication id for Fotballdata API                  |
-| cwd    | `string`  | None. Required. | Authentication password for Fotballdata API            |
+| Key    | Type      | Default Value   | Description                                             |
+|--------|-----------|-----------------|---------------------------------------------------------|
+| debug  | `boolean` | `false`         | Add configuration to HTTP requests to avoid SSL errors  |
+| mock   | `boolean` | `false`         | Whether to mock the requests or actually invoke the API |
+| clubId | `int`     | None. Required. | Your club id found in FIKS                              |
+| cid    | `int`     | None. Required. | Authentication id for Fotballdata API                   |
+| cwd    | `string`  | None. Required. | Authentication password for Fotballdata API             |
 
 ```php
 <?php

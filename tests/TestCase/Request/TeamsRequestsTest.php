@@ -9,7 +9,6 @@ use Avolle\Fotballdata\Entity\Team;
 use Avolle\Fotballdata\Request\TeamsRequests;
 use Avolle\Fotballdata\Test\TestClasses\FakeResponseTrait;
 use Avolle\Fotballdata\Test\TestClasses\TestConfigTrait;
-use Cake\Http\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,17 +24,12 @@ class TeamsRequestsTest extends TestCase
      *
      * @return void
      * @throws \Avolle\Fotballdata\Exception\EntityClassNotFoundException
+     * @throws \Avolle\Fotballdata\Exception\InvalidConfigException
      * @throws \Avolle\Fotballdata\Exception\InvalidResponseException
      * @uses \Avolle\Fotballdata\Request\TeamsRequests::get()
      */
     public function testGet(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/teams/26886?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/get.json'),
-        );
         $teamsRequest = new TeamsRequests($this->validConfig());
         $team = $teamsRequest->get(26886);
         $this->assertInstanceOf(Team::class, $team);
@@ -57,12 +51,6 @@ class TeamsRequestsTest extends TestCase
      */
     public function testMatches(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/teams/30000/matches?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/matches.json'),
-        );
         $teamsRequest = new TeamsRequests($this->validConfig());
         $team = $teamsRequest->matches(30000);
         $this->assertInstanceOf(Team::class, $team);
@@ -90,12 +78,6 @@ class TeamsRequestsTest extends TestCase
      */
     public function testTournaments(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/teams/30000/tournaments?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/tournaments.json'),
-        );
         $teamsRequest = new TeamsRequests($this->validConfig());
         $team = $teamsRequest->tournaments(30000);
         $this->assertInstanceOf(Team::class, $team);
@@ -112,12 +94,6 @@ class TeamsRequestsTest extends TestCase
      */
     public function testTables(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/teams/30000/tables?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/tables.json'),
-        );
         $teamsRequest = new TeamsRequests($this->validConfig());
         $team = $teamsRequest->tables(30000);
         $this->assertInstanceOf(Team::class, $team);
@@ -140,12 +116,6 @@ class TeamsRequestsTest extends TestCase
      */
     public function testPlayers(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/teams/30000/players?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/players.json'),
-        );
         $teamsRequest = new TeamsRequests($this->validConfig());
         $team = $teamsRequest->players(30000);
         $this->assertInstanceOf(Team::class, $team);

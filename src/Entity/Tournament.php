@@ -36,7 +36,15 @@ namespace Avolle\Fotballdata\Entity;
  * @property int $TournamentStatusId
  * @property int $TournamentTypeId
  * @property \Avolle\Fotballdata\Entity\TournamentTableTeam[] $TournamentTableTeams
+ * @property \Avolle\Fotballdata\Entity\Game[] $Matches
+ * @property \Avolle\Fotballdata\Entity\Team[] $Teams
  */
 class Tournament extends Entity
 {
+    /*
+     * @inheritdoc
+     */
+    protected array $aliases = [
+        'Match' => 'Game',
+    ];
 }

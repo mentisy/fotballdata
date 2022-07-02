@@ -1,0 +1,31 @@
+{
+    "DistrictId": 17,
+    "DistrictName": "Sunnmøre Fotballkrets",
+    "Clubs": [
+        {
+            "ClubId": 997,
+            "ClubName": "Aksla IL",
+            "DistrictId": 17
+        },
+        {
+            "ClubId": 1025,
+            "ClubName": "Hareid IL",
+            "DistrictId": 17
+        },
+        {
+            "ClubId": 1030,
+            "ClubName": "Volda TI - Fotball",
+            "DistrictId": 17
+        },
+        {
+            "ClubId": 1006,
+            "ClubName": "AaFK Fortuna",
+            "DistrictId": 17
+        },
+        {
+            "ClubId": 996,
+            "ClubName": "Aalesunds FK",
+            "DistrictId": 17
+        }
+    ]
+}

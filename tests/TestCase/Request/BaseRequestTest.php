@@ -6,8 +6,10 @@ namespace Avolle\Fotballdata\Test\TestCase\Request;
 
 use Avolle\Fotballdata\Entity\Club;
 use Avolle\Fotballdata\Entity\District;
+use Avolle\Fotballdata\Entity\Game;
 use Avolle\Fotballdata\Entity\ResponseStatus;
 use Avolle\Fotballdata\Entity\Stadium;
+use Avolle\Fotballdata\Entity\Team;
 use Avolle\Fotballdata\Exception\InvalidConfigException;
 use Avolle\Fotballdata\Exception\InvalidResponseException;
 use Avolle\Fotballdata\Request\ClubsRequests;
@@ -40,6 +42,7 @@ class BaseRequestTest extends TestCase
         $request = new TeamsRequests($this->validConfig());
         $defaultConfig = [
             'debug' => false,
+            'mock' => true,
             'host' => 'api.fotballdata.no/v1',
             'clubId' => 1,
             'cid' => 2,
@@ -49,6 +52,7 @@ class BaseRequestTest extends TestCase
 
         $expectedPartiallyOverwritten = [
             'debug' => false,
+            'mock' => true,
             'host' => 'http://localhost',
             'clubId' => 1,
             'cid' => 2,
@@ -59,6 +63,7 @@ class BaseRequestTest extends TestCase
 
         $confiCompletelyOverwritten = [
             'debug' => false,
+            'mock' => false,
             'host' => 'anotherhost.no',
         ] + $this->validConfig();
         $request = new TeamsRequests($confiCompletelyOverwritten);
@@ -77,19 +82,13 @@ class BaseRequestTest extends TestCase
      */
     public function testConstructorWithResponseArray(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('districts/all.json'),
-        );
         $request = new DistrictsRequests($this->validConfig());
         $this->assertSame('District', $request->entityName);
         $match = $request->all();
         $this->assertCount(19, $match);
         $this->assertInstanceOf(District::class, $match[0]);
         $this->assertSame(18, $match[0]->DistrictId);
-        $this->assertSame('Hålogaland Fotballkrets', $match[0]->DistrictName);
+        $this->assertSame('Test Fotballkrets', $match[0]->DistrictName);
     }
 
     /**
@@ -104,12 +103,6 @@ class BaseRequestTest extends TestCase
      */
     public function testGetSuccess(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/clubs/1?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/get.json'),
-        );
         $request = new ClubsRequests($this->validConfig());
         $this->assertSame('Club', $request->entityName);
         $club = $request->get(1);
@@ -228,5 +221,43 @@ class BaseRequestTest extends TestCase
         $this->expectException(InvalidConfigException::class);
         $this->expectExceptionMessage('You must specify `clubId`, `cid` and `cwd` in config array.');
         new MatchesRequests($config);
+    }
+
+    /**
+     * Test mock method
+     *
+     * @return void
+     * @throws \Avolle\Fotballdata\Exception\EntityClassNotFoundException
+     * @throws \Avolle\Fotballdata\Exception\InvalidResponseException
+     * @throws \Avolle\Fotballdata\Exception\InvalidConfigException
+     * @uses \Avolle\Fotballdata\Request\BaseRequest::mock()
+     */
+    public function testMock(): void
+    {
+        $config = $this->validConfig() + ['mock' => true];
+
+        // Request all
+        $districtsRequest = new DistrictsRequests($config);
+        $districts = $districtsRequest->all();
+        $this->assertIsArray($districts);
+        $this->assertInstanceOf(District::class, $districts[0]);
+        // DistrictName as "Test Fotballkrets" means the response was mocked with /districts/all.json
+        $this->assertSame('Test Fotballkrets', $districts[0]->DistrictName);
+
+        // Request get - Without associated data
+        $matchesRequests = new MatchesRequests($config);
+        $matchWithPeople = $matchesRequests->get(1);
+        $this->assertInstanceOf(Game::class, $matchWithPeople);
+        // AwayTeamName as "A Team Senior A" means the response was mocked with /matches/get.json
+        $this->assertSame('A Team Senior A', $matchWithPeople->AwayTeamName);
+
+        // Request get - With associated data
+        $teamsRequests  = new TeamsRequests($config);
+        $teamWithTables = $teamsRequests->tables(1);
+        $this->assertInstanceOf(Team::class, $teamWithTables);
+        // TeamName as "Some Team Senior A" means the response was mocked with /teams/tables.json
+        $this->assertSame('Some Team Senior A', $teamWithTables->TeamName);
+        $this->assertIsArray($teamWithTables->Tournaments);
+        $this->assertCount(12, $teamWithTables->Tournaments[0]->TournamentTableTeams);
     }
 }

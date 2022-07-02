@@ -10,6 +10,7 @@ use Avolle\Fotballdata\Entity\EntityArray;
 use Avolle\Fotballdata\Entity\EntityTrait;
 use Avolle\Fotballdata\Exception\InvalidConfigException;
 use Avolle\Fotballdata\Exception\InvalidResponseException;
+use Avolle\Fotballdata\Request\Mock\MockRequest;
 use Avolle\Fotballdata\Utility\Inflector;
 use Cake\Http\Client;
 use Psr\Http\Client\ClientInterface;
@@ -25,7 +26,7 @@ abstract class BaseRequest
     /**
      * HTTP Scheme
      */
-    protected const SCHEME = 'https';
+    public const SCHEME = 'https';
 
     /**
      * Format to retrieve results in
@@ -57,6 +58,7 @@ abstract class BaseRequest
      * Default config
      *
      * - debug - Boolean value that defines whether to use debug values on requests (which host and SSL props)
+     * - mock - If true, it will mock the requests and return an example response. If false, fetch from API
      * - clubId - The club's ID in the FIKS system
      * - cid - Client id from Fotballdata Auth
      * - cwd - Client password from Fotballdata Auth
@@ -65,6 +67,7 @@ abstract class BaseRequest
      */
     public array $defaultConfig = [
         'debug' => false,
+        'mock' => false,
         'host' => 'api.fotballdata.no/v1',
     ];
 
@@ -108,6 +111,11 @@ abstract class BaseRequest
             'cwd' => $this->config->read('cwd'),
             'format' => self::FORMAT,
         ];
+
+        if ($this->config->read('mock')) {
+            $this->mock($endpoint, $query);
+        }
+
         $response = $this->client->get($url, $query);
         $this->responseBody = $response->getBody()->getContents();
         if ($response->getStatusCode() !== 200 && empty($this->responseBody)) {
@@ -181,5 +189,19 @@ abstract class BaseRequest
         }
 
         return $this->client ?? $this->client = new Client($clientConfig);
+    }
+
+    /**
+     * Mock a request
+     *
+     * @param \Avolle\Fotballdata\Endpoint\EndpointInterface $endpoint Endpoint
+     * @param array<string, mixed> $query Query URL
+     * @return void
+     */
+    protected function mock(EndpointInterface $endpoint, array $query): void
+    {
+        $mock = new MockRequest($this, $endpoint, $query);
+
+        $this->client::addMockResponse($mock->getMethod(), $mock->getUrl(), $mock->getResponse());
     }
 }

@@ -1,0 +1,67 @@
+{
+    "TournamentId": 181413,
+    "TournamentName": "5. div. menn",
+    "AgeCategoryId": 4,
+    "DistrictId": 17,
+    "Division": 5,
+    "GenderId": 2,
+    "Group": 1,
+    "HalfTimeBreakInMin": 15,
+    "LastChangedDate": "\/Date(1654590422437-0000)\/",
+    "MatchPeriodDurationInMin": 45,
+    "NumberOfMatchPeriods": 2,
+    "NumberOfPromotedTeams": 2,
+    "NumberOfRelegatedTeams": 0,
+    "NumberOfTeams": 12,
+    "NumberOfTeamsQualifiedForPromotion": 0,
+    "NumberOfTeamsQualifiedForRelegation": 0,
+    "PitchSizeName": "11er",
+    "PlayersOnField": 11,
+    "PlayFormName": "11 MOT 11",
+    "PublishResult": true,
+    "PublishTournamentTable": true,
+    "PushChanges": false,
+    "SeasonId": 100,
+    "StartDateFirstTournamentRound": "\/Date(1650240000000-0000)\/",
+    "TournamentAgeCategory": 18,
+    "TournamentNumber": "23120501",
+    "TournamentStatusId": 6,
+    "TournamentTypeId": 1,
+    "Teams": [
+        {
+            "TeamId": 26886,
+            "TeamName": "Aksla Senior A",
+            "ClubId": 997
+        },
+        {
+            "TeamId": 198219,
+            "TeamName": "Giske Senior A",
+            "ClubId": 1053
+        },
+        {
+            "TeamId": 28275,
+            "TeamName": "Ravn Menn 1",
+            "ClubId": 1062
+        },
+        {
+            "TeamId": 54990,
+            "TeamName": "Spjelkavik Menn 2",
+            "ClubId": 1004
+        },
+        {
+            "TeamId": 27633,
+            "TeamName": "Stranda Menn Senior A",
+            "ClubId": 1042
+        },
+        {
+            "TeamId": 55226,
+            "TeamName": "Sykkylven IL Menn 1",
+            "ClubId": 1047
+        },
+        {
+            "TeamId": 152,
+            "TeamName": "Valder Menn Senior A",
+            "ClubId": 1055
+        }
+    ]
+}
