@@ -57,6 +57,7 @@ namespace Avolle\Fotballdata\Entity;
  * @property \Avolle\Fotballdata\Entity\Player[] $AwayTeamPlayers
  * @property \Avolle\Fotballdata\Entity\Player[] $HomeTeamPlayers
  * @property \Avolle\Fotballdata\Entity\MatchEvent[] $MatchEventList
+ * @property \Avolle\Fotballdata\Entity\Referee[] $Referees
  */
 class Game extends Entity
 {
