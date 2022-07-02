@@ -8,7 +8,6 @@ use Avolle\Fotballdata\Entity\Season;
 use Avolle\Fotballdata\Request\SeasonsRequests;
 use Avolle\Fotballdata\Test\TestClasses\FakeResponseTrait;
 use Avolle\Fotballdata\Test\TestClasses\TestConfigTrait;
-use Cake\Http\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,12 +29,6 @@ class SeasonsRequestsTest extends TestCase
      */
     public function testAll(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/seasons/?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default_array.json'),
-        );
         $seasonsRequests = new SeasonsRequests($this->validConfig());
         $seasons = $seasonsRequests->all();
         /** @noinspection PhpConditionAlreadyCheckedInspection */
@@ -53,12 +46,6 @@ class SeasonsRequestsTest extends TestCase
      */
     public function testGet(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/seasons/1?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $seasonsRequests = new SeasonsRequests($this->validConfig());
         $season = $seasonsRequests->get(1);
         $this->assertInstanceOf(Season::class, $season);

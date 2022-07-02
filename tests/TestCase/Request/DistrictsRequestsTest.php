@@ -8,7 +8,6 @@ use Avolle\Fotballdata\Entity\District;
 use Avolle\Fotballdata\Request\DistrictsRequests;
 use Avolle\Fotballdata\Test\TestClasses\FakeResponseTrait;
 use Avolle\Fotballdata\Test\TestClasses\TestConfigTrait;
-use Cake\Http\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,12 +29,6 @@ class DistrictsRequestsTest extends TestCase
      */
     public function testAll(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default_array.json'),
-        );
         $districtsRequests = new DistrictsRequests($this->validConfig());
         $districts = $districtsRequests->all();
         /** @noinspection PhpConditionAlreadyCheckedInspection */
@@ -53,12 +46,6 @@ class DistrictsRequestsTest extends TestCase
      */
     public function testGet(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/1?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $districtsRequests = new DistrictsRequests($this->validConfig());
         $district = $districtsRequests->get(1);
         $this->assertInstanceOf(District::class, $district);
@@ -75,12 +62,6 @@ class DistrictsRequestsTest extends TestCase
      */
     public function testClubs(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/26886/clubs?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $districtsRequests = new DistrictsRequests($this->validConfig());
         $district = $districtsRequests->clubs(26886);
         $this->assertInstanceOf(District::class, $district);
@@ -97,12 +78,6 @@ class DistrictsRequestsTest extends TestCase
      */
     public function testTeams(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/26886/teams?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $districtsRequests = new DistrictsRequests($this->validConfig());
         $district = $districtsRequests->teams(26886);
         $this->assertInstanceOf(District::class, $district);
@@ -119,12 +94,6 @@ class DistrictsRequestsTest extends TestCase
      */
     public function testTournaments(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/26886/tournaments?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $districtsRequests = new DistrictsRequests($this->validConfig());
         $district = $districtsRequests->tournaments(26886);
         $this->assertInstanceOf(District::class, $district);
@@ -141,12 +110,6 @@ class DistrictsRequestsTest extends TestCase
      */
     public function testStadiums(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/26886/stadiums?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('default.json'),
-        );
         $districtsRequests = new DistrictsRequests($this->validConfig());
         $district = $districtsRequests->stadiums(26886);
         $this->assertInstanceOf(District::class, $district);

@@ -42,7 +42,7 @@ class BaseRequestTest extends TestCase
         $request = new TeamsRequests($this->validConfig());
         $defaultConfig = [
             'debug' => false,
-            'mock' => false,
+            'mock' => true,
             'host' => 'api.fotballdata.no/v1',
             'clubId' => 1,
             'cid' => 2,
@@ -52,7 +52,7 @@ class BaseRequestTest extends TestCase
 
         $expectedPartiallyOverwritten = [
             'debug' => false,
-            'mock' => false,
+            'mock' => true,
             'host' => 'http://localhost',
             'clubId' => 1,
             'cid' => 2,
@@ -82,12 +82,6 @@ class BaseRequestTest extends TestCase
      */
     public function testConstructorWithResponseArray(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/districts/?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('districts/all.json'),
-        );
         $request = new DistrictsRequests($this->validConfig());
         $this->assertSame('District', $request->entityName);
         $match = $request->all();
@@ -109,12 +103,6 @@ class BaseRequestTest extends TestCase
      */
     public function testGetSuccess(): void
     {
-        Client::clearMockResponses();
-        Client::addMockResponse(
-            'GET',
-            'https://api.fotballdata.no/v1/clubs/1?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('teams/get.json'),
-        );
         $request = new ClubsRequests($this->validConfig());
         $this->assertSame('Club', $request->entityName);
         $club = $request->get(1);
