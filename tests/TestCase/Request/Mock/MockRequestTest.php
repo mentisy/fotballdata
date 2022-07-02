@@ -169,7 +169,7 @@ class MockRequestTest extends TestCase
         $this->expectException(MockFileNotFoundException::class);
         $this->expectExceptionMessageMatches(sprintf(
             '/Mock file `[\/:._a-zA-Z\d\\\]+%s` could not be found\./',
-            preg_quote('matches' . $ds . 'notfound.json'),
+            preg_quote('matches' . $ds . 'notfound.json', '/'),
         ));
         $request = new MatchesRequests($this->validConfig());
         $endpoint = (new EndpointBuilder('matches/'))->setUrl('1/notfound');
