@@ -79,7 +79,7 @@ class MatchesRequestsTest extends TestCase
         Client::addMockResponse(
             'GET',
             'https://api.fotballdata.no/v1/matches/26886/peopleandevents?clubId=1&cid=2&cwd=a-pass&format=json',
-            $this->fakeOkResponse('matches/people-and-events.json'),
+            $this->fakeOkResponse('matches/peopleandevents.json'),
         );
         $matchesRequests = new MatchesRequests($this->validConfig());
         $match = $matchesRequests->peopleAndEvents(26886);
