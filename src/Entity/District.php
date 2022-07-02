@@ -9,17 +9,11 @@ namespace Avolle\Fotballdata\Entity;
  *
  * @property int $DistrictId
  * @property string $DistrictName
- * @property \Avolle\Fotballdata\Entity\Club[] $clubs
- * @property \Avolle\Fotballdata\Entity\Game[] $Matches
+ * @property \Avolle\Fotballdata\Entity\Club[] $Clubs
  * @property \Avolle\Fotballdata\Entity\Team[] $Teams
  * @property \Avolle\Fotballdata\Entity\Tournament[] $Tournaments
+ * @property \Avolle\Fotballdata\Entity\Stadium[] $Stadiums
  */
 class District extends Entity
 {
-    /*
-     * @inheritdoc
-     */
-    protected array $aliases = [
-        'Match' => 'Game',
-    ];
 }
