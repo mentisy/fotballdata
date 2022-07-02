@@ -12,6 +12,7 @@ use Avolle\Fotballdata\Endpoint\SeasonsEndpoints;
 use Avolle\Fotballdata\Endpoint\StadiumsEndpoints;
 use Avolle\Fotballdata\Endpoint\TeamsEndpoints;
 use Avolle\Fotballdata\Endpoint\TournamentsEndpoints;
+use Avolle\Fotballdata\Exception\MockFileNotFoundException;
 use Avolle\Fotballdata\Request\ClubsRequests;
 use Avolle\Fotballdata\Request\DistrictsRequests;
 use Avolle\Fotballdata\Request\MatchesRequests;
@@ -150,6 +151,28 @@ class MockRequestTest extends TestCase
         $this->expectExceptionMessage(sprintf('Could not find mocked response file `%s`.', '/something-invalid'));
         $request = new MatchesRequests($this->validConfig());
         $endpoint = (new EndpointBuilder('/'))->setUrl('something-invalid');
+        new MockRequest($request, $endpoint, []);
+    }
+
+    /**
+     * Test mockFile method
+     * Mock file does not exist
+     *
+     * @return void
+     * @throws \Avolle\Fotballdata\Exception\InvalidConfigException
+     * @throws \Avolle\Fotballdata\Exception\MockFileNotFoundException
+     * @uses \Avolle\Fotballdata\Request\Mock\MockRequest::mockFile()
+     */
+    public function testMockFileNotFound(): void
+    {
+        $ds = DIRECTORY_SEPARATOR;
+        $this->expectException(MockFileNotFoundException::class);
+        $this->expectExceptionMessageMatches(sprintf(
+            '/Mock file `[\/:._a-zA-Z\d\\\]+%s` could not be found\./',
+            preg_quote('matches' . $ds . 'notfound.json'),
+        ));
+        $request = new MatchesRequests($this->validConfig());
+        $endpoint = (new EndpointBuilder('matches/'))->setUrl('1/notfound');
         new MockRequest($request, $endpoint, []);
     }
 
