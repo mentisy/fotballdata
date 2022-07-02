@@ -126,7 +126,7 @@ class MockRequestTest extends TestCase
     public function testMockFile(string $file, string $request, string $endpoint, string $method, ...$args): void
     {
         $request = new $request($this->validConfig());
-        $endpoint = new $endpoint->$method(...$args);
+        $endpoint = (new $endpoint())->$method(...$args);
         $query = [];
         $mockRequest = new MockRequest($request, $endpoint, $query);
         $this->assertJsonStringEqualsJsonFile(

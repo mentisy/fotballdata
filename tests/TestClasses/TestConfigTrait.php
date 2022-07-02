@@ -17,6 +17,7 @@ trait TestConfigTrait
     public function validConfig(): array
     {
         return [
+            'mock' => true,
             'clubId' => 1,
             'cid' => 2,
             'cwd' => 'a-pass',

@@ -65,11 +65,11 @@ class StadiumsRequests extends BaseRequest
      * Get children stadiums for a stadium from the API
      *
      * @param int $id Stadium id
-     * @return \Avolle\Fotballdata\Entity\Stadium
+     * @return array<\Avolle\Fotballdata\Entity\Stadium>
      * @throws \Avolle\Fotballdata\Exception\EntityClassNotFoundException
      * @throws \Avolle\Fotballdata\Exception\InvalidResponseException
      */
-    public function children(int $id): EntityInterface
+    public function children(int $id): array
     {
         $endpoint = (new StadiumsEndpoints())->children($id);
         $this->sendRequest($endpoint);
