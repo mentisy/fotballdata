@@ -1,0 +1,76 @@
+{
+    "DistrictId": 17,
+    "DistrictName": "Sunnmøre Fotballkrets",
+    "Teams": [
+        {
+            "TeamId": 159039,
+            "TeamName": "Aksla",
+            "AgeCategoryId": 4,
+            "AgeCategoryName": "Voksen",
+            "GenderId": 2,
+            "GenderName": "Mann",
+            "ClubId": 997,
+            "ClubName": "Aksla IL"
+        },
+        {
+            "TeamId": 166167,
+            "TeamName": "Aksla Dame",
+            "AgeCategoryId": 4,
+            "AgeCategoryName": "Voksen",
+            "GenderId": 3,
+            "GenderName": "Kvinne",
+            "ClubId": 997,
+            "ClubName": "Aksla IL"
+        },
+        {
+            "TeamId": 27366,
+            "TeamName": "Aksla G09 3",
+            "AgeCategoryId": 2,
+            "AgeCategoryName": "Barn",
+            "GenderId": 2,
+            "GenderName": "Mann",
+            "ClubId": 997,
+            "ClubName": "Aksla IL"
+        },
+        {
+            "TeamId": 26886,
+            "TeamName": "Aksla Senior A",
+            "AgeCategoryId": 4,
+            "AgeCategoryName": "Voksen",
+            "GenderId": 2,
+            "GenderName": "Mann",
+            "ClubId": 997,
+            "ClubName": "Aksla IL"
+        },
+        {
+            "TeamId": 175474,
+            "TeamName": "Blindheim IL",
+            "AgeCategoryId": 2,
+            "AgeCategoryName": "Barn",
+            "GenderId": 2,
+            "GenderName": "Mann",
+            "ClubId": 998,
+            "ClubName": "Blindheim IL"
+        },
+        {
+            "TeamId": 141175,
+            "TeamName": "Brattvåg",
+            "AgeCategoryId": 3,
+            "AgeCategoryName": "Ungdom",
+            "GenderId": 3,
+            "GenderName": "Kvinne",
+            "ClubId": 1057,
+            "ClubName": "Brattvåg IL - Fotball"
+        },
+        {
+            "TeamId": 150901,
+            "TeamName": "Guard J2005 Blå",
+            "AgeCategoryId": 2,
+            "AgeCategoryName": "Barn",
+            "GenderId": 3,
+            "GenderName": "Kvinne",
+            "ClubId": 1000,
+            "ClubName": "Guard, SK"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "StadiumId": 3047,
+        "StadiumName": "Aksla stadion 9er A",
+        "SurfaceName": "Naturgress",
+        "DistrictId": 17,
+        "Latitude": "62.4726294072",
+        "Longitude": "6.18411237631",
+        "LastChangedDate": "\/Date(1545142719243-0000)\/",
+        "StadiumParentId": 3046,
+        "StadiumParentName": "Aksla stadion",
+        "StadiumType": 2
+    },
+    {
+        "StadiumId": 4049,
+        "StadiumName": "Aksla stadion 9er B",
+        "SurfaceName": "Naturgress",
+        "DistrictId": 17,
+        "Latitude": "62.4726294072",
+        "Longitude": "6.18411237631",
+        "LastChangedDate": "\/Date(1545142739380-0000)\/",
+        "StadiumParentId": 3046,
+        "StadiumParentName": "Aksla stadion",
+        "StadiumType": 2
+    }
+]

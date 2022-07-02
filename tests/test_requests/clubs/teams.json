@@ -1,0 +1,22 @@
+{
+    "ClubId": 997,
+    "ClubName": "Aksla IL",
+    "DistrictId": 17,
+    "Teams": [
+        {
+            "TeamId": 166167,
+            "TeamName": "Aksla Women",
+            "ClubId": 997
+        },
+        {
+            "TeamId": 169454,
+            "TeamName": "Aksla G10 White",
+            "ClubId": 997
+        },
+        {
+            "TeamId": 169452,
+            "TeamName": "Aksla G10 Red",
+            "ClubId": 997
+        }
+    ]
+}
