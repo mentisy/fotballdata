@@ -1,7 +1,7 @@
 # Fotballdata SDK for PHP
 [![codecov](https://codecov.io/gh/mentisy/fotballdata/branch/main/graph/badge.svg?token=fHDySEsedW)](https://codecov.io/gh/mentisy/fotballdata)
 [![GitHub](https://img.shields.io/github/license/mentisy/fotballdata)](https://github.com/mentisy/fotballdata/blob/main/LICENSE)
-[![PHP Version Require](http://poser.pugx.org/phpunit/phpunit/require/php)](https://packagist.org/packages/avolle/fotballdata)
+[![PHP Version Require](http://poser.pugx.org/avolle/fotballdata/require/php)](https://packagist.org/packages/avolle/fotballdata)
 
 A library for fetching data from [Norwegian Football API service Fotballdata](https://www.fotballdata.no/).
 
