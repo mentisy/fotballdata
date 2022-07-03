@@ -20,4 +20,13 @@ namespace Avolle\Fotballdata\Entity;
  */
 class Player extends Entity
 {
+    /**
+     * Get the player's full name
+     *
+     * @return string
+     */
+    public function fullName(): string
+    {
+        return $this->FirstName . ' ' . $this->SurName;
+    }
 }

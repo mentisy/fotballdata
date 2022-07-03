@@ -14,4 +14,5 @@ namespace Avolle\Fotballdata\Entity;
  */
 class Season extends Entity
 {
+    use EntityHelperTrait;
 }

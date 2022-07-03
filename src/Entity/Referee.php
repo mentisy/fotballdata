@@ -12,6 +12,8 @@ namespace Avolle\Fotballdata\Entity;
  * @property string $FirstName
  * @property string $SurName
  * @property bool $PersonInfoHidden
+ * @property int $RefereeTypeId
+ * @property string $RefereeType
  * @property string $Email
  * @property string $MobilePhone
  * @property int $RefereeClubId
@@ -20,4 +22,13 @@ namespace Avolle\Fotballdata\Entity;
  */
 class Referee extends Entity
 {
+    /**
+     * Get the referee's full name
+     *
+     * @return string
+     */
+    public function fullName(): string
+    {
+        return $this->FirstName . ' ' . $this->SurName;
+    }
 }

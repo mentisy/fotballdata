@@ -51,8 +51,14 @@ class Entity implements EntityInterface
                     }
                     $propertyValues = [];
                     foreach ($value as $array) {
-                        $object = new $className((array)$array);
-                        $propertyValues[] = $object;
+                        if ($array instanceof EntityInterface) {
+                            // We don't need to create an entity, since it already is an entity
+                            $propertyValues[] = $array;
+                        } else {
+                            // Create new entity based on values in array
+                            $object = new $className((array)$array);
+                            $propertyValues[] = $object;
+                        }
                     }
                     $this->$property = $propertyValues;
                 } else {
