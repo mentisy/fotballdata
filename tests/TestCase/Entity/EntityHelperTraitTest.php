@@ -36,9 +36,12 @@ class EntityHelperTraitTest extends TestCase
      */
     public function testToDate(): void
     {
+        $timezone = date_default_timezone_get();
+        date_default_timezone_set('Europe/Oslo'); // The API returns all datetimes in this timezone, without changing the timezone suffix
         $this->assertSame('2022-04-21 23:58:27', $this->toDate('date'));
         $this->assertSame('Unknown', $this->toDate('invalidDate'));
         $this->assertSame('Unknown', $this->toDate('not-a-property'));
+        date_default_timezone_set($timezone);
     }
 
     /**
