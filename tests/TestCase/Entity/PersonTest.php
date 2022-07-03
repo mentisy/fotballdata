@@ -10,6 +10,20 @@ use PHPUnit\Framework\TestCase;
 class PersonTest extends TestCase
 {
     /**
+     * Test fullName method
+     *
+     * @return void
+     * @uses \Avolle\Fotballdata\Entity\Person::fullName()
+     */
+    public function testFullName(): void
+    {
+        $person = new Person();
+        $person->FirstName = 'Alexander Filli';
+        $person->SurName = 'Bom Bom Bom';
+        $this->assertSame('Alexander Filli Bom Bom Bom', $person->fullName());
+    }
+
+    /**
      * Test toRoleName method
      *
      * @return void

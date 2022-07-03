@@ -21,6 +21,8 @@ namespace Avolle\Fotballdata\Entity;
  */
 class Stadium extends Entity
 {
+    use EntityHelperTrait;
+
     /*
      * @inheritdoc
      */

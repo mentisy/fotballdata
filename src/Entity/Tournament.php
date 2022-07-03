@@ -41,6 +41,8 @@ namespace Avolle\Fotballdata\Entity;
  */
 class Tournament extends Entity
 {
+    use EntityHelperTrait;
+
     /*
      * @inheritdoc
      */

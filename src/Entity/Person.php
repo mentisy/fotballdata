@@ -34,6 +34,16 @@ class Person extends Entity
         23 => 'Inkluderingsansvarlig',
     ];
 
+    /**
+     * Get the person's full name
+     *
+     * @return string
+     */
+    public function fullName(): string
+    {
+        return $this->FirstName . ' ' . $this->SurName;
+    }
+
     public function toRoleName(): string
     {
         if (!isset($this->RoleId, self::ROLES[$this->RoleId])) {

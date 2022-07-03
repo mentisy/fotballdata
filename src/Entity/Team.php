@@ -22,6 +22,13 @@ namespace Avolle\Fotballdata\Entity;
  */
 class Team extends Entity
 {
+    /**
+     * @inheritdoc
+     */
+    protected array $hasMany = [
+        'Persons' => 'Person',
+    ];
+
     /*
      * @inheritdoc
      */
