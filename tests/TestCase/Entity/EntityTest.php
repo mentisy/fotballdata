@@ -8,6 +8,7 @@ use Avolle\Fotballdata\Entity\Club;
 use Avolle\Fotballdata\Entity\Entity;
 use Avolle\Fotballdata\Entity\Game;
 use Avolle\Fotballdata\Entity\Person;
+use Avolle\Fotballdata\Entity\Team;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
@@ -92,6 +93,22 @@ class EntityTest extends TestCase
         $clubTeamTwo = $club->Teams[1];
         $this->assertSame(2, $clubTeamTwo->TeamId);
         $this->assertSame('Another team', $clubTeamTwo->TeamName);
+    }
+
+    /**
+     * Test constructor method
+     * Property array contains an entity as a prop, so just add that entity to props, instead of creating a new entity
+     *
+     * @return void
+     * @throws \Exception
+     * @uses \Avolle\Fotballdata\Entity\Entity::__construct()
+     */
+    public function testConstructorEntityAlreadyCreated(): void
+    {
+        $person = new Person(['FirstName' => 'A first name', 'SurName' => 'A sur name']);
+        $Persons = [$person];
+        $team = new Team(compact('Persons'));
+        $this->assertInstanceOf(Person::class, $team->Persons[0]);
     }
 
     /**
