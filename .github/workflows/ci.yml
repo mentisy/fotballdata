@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - '*'
+  schedule:
+    # First day of every month, at 15:30
+    - cron: '30 15 1 * *'
 
 permissions:
   contents: read
