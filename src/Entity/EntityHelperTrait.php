@@ -24,7 +24,7 @@ trait EntityHelperTrait
         }
         [, $timeInMilliseconds] = $matches;
 
-        return date('Y-m-d H:i:s', (int)($timeInMilliseconds / 1000));
+        return date('Y-m-d H:i:s', (int)((int)$timeInMilliseconds / 1000));
     }
 
     /**
