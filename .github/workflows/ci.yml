@@ -57,11 +57,11 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.1'
           coverage: none
 
       - name: Composer install
-        run: composer install --ignore-platform-reqs
+        run: composer install
 
       - name: Run PHP CodeSniffer
         run: composer cs-check
@@ -76,11 +76,11 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.1'
           coverage: none
 
       - name: composer install
-        run: composer require --dev phpstan/phpstan --ignore-platform-reqs
+        run: composer require --dev phpstan/phpstan
 
       - name: Run phpstan
         run: vendor/bin/phpstan
