@@ -117,7 +117,7 @@ abstract class BaseRequest
         }
 
         $response = $this->client->get($url, $query);
-        $this->responseBody = $response->getBody()->getContents();
+        $this->responseBody = $response->getStringBody();
         if ($response->getStatusCode() !== 200 && empty($this->responseBody)) {
             throw new InvalidResponseException(sprintf(
                 'Request tried `%s`, but response returned with code %s (%s)',

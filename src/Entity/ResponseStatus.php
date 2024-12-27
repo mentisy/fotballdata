@@ -9,7 +9,7 @@ namespace Avolle\Fotballdata\Entity;
  *
  * @property string $ErrorCode
  * @property string $Message
- * @property array $Errors
+ * @property array<string> $Errors
  */
 class ResponseStatus extends Entity
 {
