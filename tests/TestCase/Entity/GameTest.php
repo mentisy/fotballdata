@@ -217,7 +217,7 @@ class GameTest extends TestCase
     {
         $game = new Game(['MatchStartDate' => '/Date(1650565800000-0000)/']);
         $this->assertFalse($game->isFuture());
-        $game->MatchStartDate = '/Date(1720005976000-0000)/';
+        $game->MatchStartDate = '/Date(9720005976000-0000)/';
         $this->assertTrue($game->isFuture());
     }
 
@@ -232,7 +232,7 @@ class GameTest extends TestCase
     {
         $game = new Game(['MatchStartDate' => '/Date(1650565800000-0000)/']);
         $this->assertTrue($game->isPast());
-        $game->MatchStartDate = '/Date(1720005976000-0000)/';
+        $game->MatchStartDate = '/Date(9720005976000-0000)/';
         $this->assertFalse($game->isPast());
     }
 }
