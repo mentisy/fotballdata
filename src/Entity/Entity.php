@@ -14,6 +14,13 @@ class Entity implements EntityInterface
     use EntityTrait;
 
     /**
+     * Field values
+     *
+     * @var array<string, mixed>
+     */
+    private array $fields = [];
+
+    /**
      * Define properties that will contain an array that should cast the array values to Entities
      * instead of casting the property itself to an entity
      *
@@ -32,17 +39,29 @@ class Entity implements EntityInterface
     /**
      * Constructor
      *
-     * @param array<string, mixed>|object $properties Entity properties
+     * @param object|array<string, mixed> $properties Entity properties
      * @throws \Exception
      */
-    public function __construct($properties = [])
+    public function __construct(array|object $properties = [])
+    {
+        $this->setProperties($properties);
+    }
+
+    /**
+     * Set properties
+     *
+     * @param object|array<string, mixed> $properties Entity properties
+     * @return void
+     * @throws \Exception
+     */
+    public function setProperties(array|object $properties = []): void
     {
         if (!empty($properties)) {
             foreach ($properties as $property => $value) {
                 if (is_object($value)) {
                     $className = $this->entityClassName($property);
                     $object = new $className($value);
-                    $this->$property = $object;
+                    $this->set($property, $object);
                 } elseif (is_array($value)) {
                     if (isset($this->hasMany[$property])) {
                         $className = $this->entityClassName($this->hasMany[$property]);
@@ -60,9 +79,9 @@ class Entity implements EntityInterface
                             $propertyValues[] = $object;
                         }
                     }
-                    $this->$property = $propertyValues;
+                    $this->set($property, $propertyValues);
                 } else {
-                    $this->$property = $value;
+                    $this->set($property, $value);
                 }
             }
         }
@@ -77,7 +96,7 @@ class Entity implements EntityInterface
      */
     public function set(string $name, $value): void
     {
-        $this->$name = $value;
+        $this->fields[$name] = $value;
     }
 
     /**
@@ -86,8 +105,44 @@ class Entity implements EntityInterface
      * @param string $name Name of property
      * @return mixed
      */
-    public function get(string $name)
+    public function &get(string $name): mixed
     {
-        return $this->$name;
+        $value = $this->fields[$name] ?? null;
+
+        return $value;
+    }
+
+    /**
+     * Magic getter to get field values in entity
+     *
+     * @param string $field Field name
+     * @return mixed Field value
+     */
+    public function &__get(string $field): mixed
+    {
+        return $this->get($field);
+    }
+
+    /**
+     * Magic setter to set field values in entity
+     *
+     * @param string $field Field name
+     * @param mixed $value Field value
+     * @return void
+     */
+    public function __set(string $field, mixed $value): void
+    {
+        $this->set($field, $value);
+    }
+
+    /**
+     * Magic checker if field value is set. A null value will return false.
+     *
+     * @param string $field Field name
+     * @return bool
+     */
+    public function __isset(string $field): bool
+    {
+        return $this->get($field) !== null;
     }
 }
