@@ -8,6 +8,11 @@ A library for fetching data from [Norwegian Football API service Fotballdata](ht
 ### Installation:
 `composer install avolle/fotballdata`
 
+### Supports:
+* PHP 8.1
+* PHP 8.2
+* PHP 8.3
+
 ### Gotchas
 As `match` is a [protected control structure token](https://www.php.net/manual/en/control-structures.match.php) 
 for PHP from version 8.0 and up, we need to alias the `Match` entity. Therefore all Match results use the `Game` entity.
